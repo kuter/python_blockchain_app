@@ -6,6 +6,12 @@ A simple tutorial for developing a blockchain application from scratch in Python
 
 Please read the [step-by-step implementation tutorial](https://www.ibm.com/developerworks/cloud/library/cl-develop-blockchain-app-in-python/index.html) to get your answers :)
 
+## Running project with honcho
+
+```sh
+$ honcho start
+```
+
 ## Instructions to run
 
 Clone the project,
