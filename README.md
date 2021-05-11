@@ -8,9 +8,31 @@ Please read the [step-by-step implementation tutorial](https://www.ibm.com/devel
 
 ## Running project with honcho
 
+### Install requirements:
+
+```sh
+$ pip install -r requirements.txt
+```
+
+### Run project with honcho
+
 ```sh
 $ honcho start
 ```
+
+### Register nodes
+
+```sh
+curl -X POST \
+  http://127.0.0.1:8001/register_with \
+  -H 'Content-Type: application/json' \
+  -d '{"node_address": "http://127.0.0.1:8000"}'
+curl -X POST \
+  http://127.0.0.1:8002/register_with \
+  -H 'Content-Type: application/json' \
+  -d '{"node_address": "http://127.0.0.1:8000"}'
+```
+
 
 ## Instructions to run
 
