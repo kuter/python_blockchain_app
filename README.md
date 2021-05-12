@@ -20,19 +20,27 @@ $ pip install -r requirements.txt
 $ honcho start
 ```
 
-### Register nodes
+### Usage
 
 ```sh
-curl -X POST \
-  http://127.0.0.1:8001/register_with \
-  -H 'Content-Type: application/json' \
-  -d '{"node_address": "http://127.0.0.1:8000"}'
-curl -X POST \
-  http://127.0.0.1:8002/register_with \
-  -H 'Content-Type: application/json' \
-  -d '{"node_address": "http://127.0.0.1:8000"}'
+$ http POST localhost:8000/new_transaction content=bar author=foo
 ```
+then request to mine:
 
+```sh
+$ http localhost:8000/mine
+```
+check if message is already in chain:
+
+```sh
+$ http localhost:8000/chain
+```
+register more nodes:
+
+```sh
+$ http POST localhost:8001/register_with node_address=http://127.0.0.1:8000
+$ http POST localhost:8002/register_with node_address=http://127.0.0.1:8000
+```
 
 ## Instructions to run
 
